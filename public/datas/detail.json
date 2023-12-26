@@ -1,0 +1,86 @@
+{
+  "kind": "youtube#videoListResponse",
+  "etag": "FK27NIj9U7rtpa0ghWcphOJ889I",
+  "items": [
+    {
+      "kind": "youtube#video",
+      "etag": "Gu8vRtprElR82c98b-60i8w9zWY",
+      "id": "JaIMSzE5yLA",
+      "snippet": {
+        "publishedAt": "2022-08-25T03:00:13Z",
+        "channelId": "UCXteMTpHAvyDP05G0QULuZA",
+        "title": "실리카겔 (Silica Gel) - NO PAIN [MV]",
+        "description": "🔹 NO PAIN M/V CREDIT 🔹\n\n[ Silica Gel ] \nKim Hanjoo \nKim Chunchu \nKim Geonjay \nChoi Woonghee\n\n[ Cast ] \nJoyul \nHWI \nN’Ouir \nKim Doi\n\nDirector: MELTMIRROR [isvn]\nAssistant Director & Teaser Edit: Song Kiho\n\nProduction: KEEPUSWEIRD \nExecutive Producer: Lee Seunghwan \nProducer: Kim Gawon, Park Jinju, Lee Woosung\n\nDirector of Photography: Seo Giung [Line of Sight] \n1st AC: Hong Minhyeok \n2nd AC: Kim Jaeho, Kim Jedeok \n3rd AC: Lee Jinho\n\nB Camera Operator: Baek Yunsuk \nC Camera Operator: Kim Jeong-Gak\n\nGaffer: Kang Minsoo [VIT Lighting] \nBest Boy: Lee Wonik \nELT: Choi Jihyeon, Lee Kyunghwan, Yoo Seungheon, Seo Jinhyeon\n\nPA: Park Chanhyuk, Joung Yuseok\n\nHair / Makeup: Kowon \nStyling: BahNo, Hyun kuk seon, Min wang \nCast Costume Sponsored by KIZIP\n\nMusical Instruments Technician: Shin Jaimin \nMusical Instruments Provided by Muse Music \nSound Equipment Provided by Philo’s Planet\n\nTitle Lettering / Graphic Design: SUPERSALADSTUFF\n\n[ MAGIC STRAWBERRY SOUND ] \nAhn Jihyun \nJang Jiwoong \nChoi Jeonghwa\n\n\n♪ Listen\nMelon ▶ https://bit.ly/3QTY4Y7\nGenie ▶https://bit.ly/3chojbU\nBugs ▶https://bit.ly/3PPF7of\nFLO ▶https://bit.ly/3CryFkh\nVIBE ▶https://bit.ly/3PMqpyk\nApple Music ▶https://apple.co/3PQawXz\nSpotify ▶ https://spoti.fi/3KhXiSm\nYT Music ▶https://bit.ly/3TfFzPj\n\n\n[Silica Gel  Official]\n\nSilica Gel Official Homepage : http://www.msbsound.com/artists/\nSilica Gel  Official Instagram : https://www.instagram.com/silicagel.official/\nSilica Gel  Official Facebook : https://www.facebook.com/silicagel/\nSilica Gel  Official Twitter : https://twitter.com/silicagel_seoul\n\n#SilicaGel #실리카겔 #NOPAIN #노페인 #meltmirror",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/JaIMSzE5yLA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/JaIMSzE5yLA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/JaIMSzE5yLA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/JaIMSzE5yLA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/JaIMSzE5yLA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Silica Gel 실리카겔",
+        "tags": [
+          "실리카겔",
+          "Silicagel",
+          "김한주",
+          "김춘추",
+          "최웅희",
+          "김건재",
+          "Kyo181",
+          "Deserteagle",
+          "데저트이글",
+          "Neosoul",
+          "모두그래",
+          "신서사이즈",
+          "NOPAIN",
+          "노페인"
+        ],
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "localized": {
+          "title": "실리카겔 (Silica Gel) - NO PAIN [MV]",
+          "description": "🔹 NO PAIN M/V CREDIT 🔹\n\n[ Silica Gel ] \nKim Hanjoo \nKim Chunchu \nKim Geonjay \nChoi Woonghee\n\n[ Cast ] \nJoyul \nHWI \nN’Ouir \nKim Doi\n\nDirector: MELTMIRROR [isvn]\nAssistant Director & Teaser Edit: Song Kiho\n\nProduction: KEEPUSWEIRD \nExecutive Producer: Lee Seunghwan \nProducer: Kim Gawon, Park Jinju, Lee Woosung\n\nDirector of Photography: Seo Giung [Line of Sight] \n1st AC: Hong Minhyeok \n2nd AC: Kim Jaeho, Kim Jedeok \n3rd AC: Lee Jinho\n\nB Camera Operator: Baek Yunsuk \nC Camera Operator: Kim Jeong-Gak\n\nGaffer: Kang Minsoo [VIT Lighting] \nBest Boy: Lee Wonik \nELT: Choi Jihyeon, Lee Kyunghwan, Yoo Seungheon, Seo Jinhyeon\n\nPA: Park Chanhyuk, Joung Yuseok\n\nHair / Makeup: Kowon \nStyling: BahNo, Hyun kuk seon, Min wang \nCast Costume Sponsored by KIZIP\n\nMusical Instruments Technician: Shin Jaimin \nMusical Instruments Provided by Muse Music \nSound Equipment Provided by Philo’s Planet\n\nTitle Lettering / Graphic Design: SUPERSALADSTUFF\n\n[ MAGIC STRAWBERRY SOUND ] \nAhn Jihyun \nJang Jiwoong \nChoi Jeonghwa\n\n\n♪ Listen\nMelon ▶ https://bit.ly/3QTY4Y7\nGenie ▶https://bit.ly/3chojbU\nBugs ▶https://bit.ly/3PPF7of\nFLO ▶https://bit.ly/3CryFkh\nVIBE ▶https://bit.ly/3PMqpyk\nApple Music ▶https://apple.co/3PQawXz\nSpotify ▶ https://spoti.fi/3KhXiSm\nYT Music ▶https://bit.ly/3TfFzPj\n\n\n[Silica Gel  Official]\n\nSilica Gel Official Homepage : http://www.msbsound.com/artists/\nSilica Gel  Official Instagram : https://www.instagram.com/silicagel.official/\nSilica Gel  Official Facebook : https://www.facebook.com/silicagel/\nSilica Gel  Official Twitter : https://twitter.com/silicagel_seoul\n\n#SilicaGel #실리카겔 #NOPAIN #노페인 #meltmirror"
+        },
+        "defaultAudioLanguage": "ko"
+      },
+      "contentDetails": {
+        "duration": "PT3M43S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "1362117",
+        "favoriteCount": "0",
+        "commentCount": "1014"
+      }
+    }
+  ],
+  "pageInfo": {
+    "totalResults": 1,
+    "resultsPerPage": 1
+  }
+}
