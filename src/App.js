@@ -1,9 +1,11 @@
 import { Outlet } from "react-router-dom";
+import Gnb from "./components/Gnb/Gnb";
 
 function App() {
   return (
     <>
-      <header> 헤더</header>
+      <Gnb />
+
       <Outlet />
     </>
   );
