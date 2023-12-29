@@ -4,3 +4,4 @@
 
 - react-dom-route
 - tailwind
+- react-icons
