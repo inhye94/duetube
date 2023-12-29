@@ -5,7 +5,7 @@ export default function IconButton({ text, children, extraStyle, callback }) {
     <button
       type="button"
       title={text}
-      className={`shrink-0 flex justify-center items-center w-8 h-8 text-[20px] rounded-full hover:bg-slate-200 transition-colors ${extraStyle}`}
+      className={`shrink-0 flex justify-center items-center w-8 h-8 text-[20px] rounded-full hover:bg-slate-200 transition-colors dark:hover:bg-slate-600 ${extraStyle}`}
       onClick={callback}
     >
       {children}

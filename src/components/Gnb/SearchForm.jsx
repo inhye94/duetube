@@ -35,7 +35,7 @@ export default function SearchBar({ blurEvnet }) {
       <input
         ref={$saerch}
         type="text"
-        className="grow w-[50px] px-[16px] rounded-l-md text-[16px] text-violet-700 bg-slate-100 caret-violet-700 placeholder:text-slate-400 dark:bg-slate-600"
+        className="grow w-[50px] px-[16px] rounded-l-md text-[16px] text-purple-600 bg-slate-100 caret-purple-600 placeholder:text-slate-400 dark:bg-slate-600"
         placeholder="검색"
         autoComplete="off"
         onChange={handleText}
