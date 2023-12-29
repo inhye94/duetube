@@ -1,25 +1,27 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import SearchForm from "./SearchForm";
+import Logo from "./Logo";
+import { RiMore2Fill } from "react-icons/ri";
+import IconButton from "../IconButton";
 
 export default function Gnb() {
   return (
-    <header className="dark">
-      <div className="left-box">
-        <h1>
-          <Link to="/">Duetube</Link>
-        </h1>
+    <header className="w-full h-[64px] flex flex-nowrap gap-x-[8px] justify-between items-center">
+      <div className="left-box w-[160px]">
+        <Logo />
       </div>
 
-      <div className="center-box">
+      <div className="center-box ">
         <SearchForm />
       </div>
 
-      <div className="right-box">
+      <div className="right-box flex justify-end gap-x-[8px] w-[160px]">
         <div className="toggle-box">
-          <button type="button">...</button>
+          <IconButton text="설정">
+            <RiMore2Fill aria-label="설정" />
+          </IconButton>
 
-          <ul>
+          {/* <ul>
             <li>
               <div>
                 <label>
@@ -36,7 +38,7 @@ export default function Gnb() {
                 </label>
               </div>
             </li>
-          </ul>
+          </ul> */}
         </div>
       </div>
     </header>
