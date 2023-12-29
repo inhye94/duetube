@@ -3,11 +3,15 @@ import Gnb from "./components/Gnb/Gnb";
 
 function App() {
   return (
-    <>
-      <Gnb />
+    <section className="">
+      <div className="text-slate-900 bg-white dark:text-slate-100 dark:bg-slate-800">
+        <div className="w-screen mx-auto px-2 lg:max-w-[1200px]">
+          <Gnb />
 
-      <Outlet />
-    </>
+          <Outlet />
+        </div>
+      </div>
+    </section>
   );
 }
 
