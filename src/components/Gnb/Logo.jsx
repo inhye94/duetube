@@ -9,7 +9,7 @@ export default function Logo() {
         to="/"
         className="flex flex-nowrap gap-x-1 items-center text-2xl font-bold"
       >
-        <AiFillYoutube className="text-violet-700 text-3xl  transition-colors duration-300 group-hover:text-violet-600" />
+        <AiFillYoutube className="text-purple-600 text-3xl  transition-colors duration-300 group-hover:text-purple-400" />
         Duetube
       </Link>
     </h1>
