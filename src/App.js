@@ -1,6 +1,9 @@
 import { Outlet } from "react-router-dom";
 import Gnb from "./components/Gnb/Gnb";
 import { useDarkModeContext } from "./context/DarkModeContext";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
 
 function App() {
   const { _darkMode } = useDarkModeContext();
@@ -11,7 +14,9 @@ function App() {
         <div className="w-screen mx-auto px-2 lg:max-w-[1200px]">
           <Gnb />
 
-          <Outlet />
+          <QueryClientProvider client={queryClient}>
+            <Outlet />
+          </QueryClientProvider>
         </div>
       </div>
     </section>
