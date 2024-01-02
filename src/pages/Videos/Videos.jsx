@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router-dom";
 import VideoCard from "../../components/VideoCard/VideoCard";
+import axios from "axios";
 
 export default function Videos() {
   const { keyword } = useParams();
@@ -11,9 +12,9 @@ export default function Videos() {
   } = useQuery({
     queryKey: ["videos", keyword],
     queryFn: async () => {
-      return fetch(`/datas/${keyword ? "search" : "popular"}.json`)
-        .then((res) => res.json())
-        .then((data) => data.items);
+      return axios
+        .get(`/datas/${keyword ? "search" : "popular"}.json`)
+        .then((res) => res.data.items);
     },
     refetchOnWindowFocus: false,
   });
