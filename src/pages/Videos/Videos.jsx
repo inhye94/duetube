@@ -1,20 +1,19 @@
 import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router-dom";
 import VideoCard from "../../components/VideoCard/VideoCard";
-import QaYoutube from "../../apis/QaYoutube";
+import { useYoutubeApi } from "../../context/YoutubeApiContext";
 
 export default function Videos() {
   const { keyword } = useParams();
+  const { youtube } = useYoutubeApi();
+
   const {
     isLoading,
     error,
     data: videos,
   } = useQuery({
     queryKey: ["videos", keyword],
-    queryFn: async () => {
-      const youtube = new QaYoutube();
-      return youtube.search(keyword);
-    },
+    queryFn: async () => youtube.search(keyword),
     refetchOnWindowFocus: false,
   });
 

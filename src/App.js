@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import Gnb from "./components/Gnb/Gnb";
 import { useDarkModeContext } from "./context/DarkModeContext";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { YoutubeApiProvider } from "./context/YoutubeApiContext";
 
 const queryClient = new QueryClient();
 
@@ -14,9 +15,11 @@ function App() {
         <div className="w-screen mx-auto px-2 lg:max-w-[1200px]">
           <Gnb />
 
-          <QueryClientProvider client={queryClient}>
-            <Outlet />
-          </QueryClientProvider>
+          <YoutubeApiProvider>
+            <QueryClientProvider client={queryClient}>
+              <Outlet />
+            </QueryClientProvider>
+          </YoutubeApiProvider>
         </div>
       </div>
     </section>
