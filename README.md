@@ -5,3 +5,6 @@
 - react-dom-route
 - tailwind
 - react-icons
+- react-query
+- axios
+- timeago
