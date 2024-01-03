@@ -1,11 +1,13 @@
 import { createContext, useContext } from "react";
-// import QaYoutube from "../apis/QaYoutube";
 import Youtube from "../apis/Youtube";
+import YoutubeClient from "../apis/youtubeClient";
+import QaYoutubeClient from "../apis/qaYoutubeClient";
 
 export const YoutubeContext = createContext();
 
-// const youtube = new QaYoutube();
-const youtube = new Youtube();
+const qaClient = new QaYoutubeClient();
+// const client = new YoutubeClient();
+const youtube = new Youtube(qaClient);
 
 export function YoutubeApiProvider({ children }) {
   return (
