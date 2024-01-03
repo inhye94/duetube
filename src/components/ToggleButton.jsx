@@ -34,7 +34,7 @@ function ToggleSwitch({ children }) {
 
 // ToggleButton 스타일 시작
 const _button_basic =
-  "flex justify-between gap-x-[4px] items-center w-full py-[6px] px-[8px] rounded-md transition-colors duration-300";
+  "flex justify-between gap-x-[4px] items-center w-full py-[6px] px-[8px] rounded-md *:transition-colors *:duration-300";
 
 const _button_hover = "hover:bg-slate-100";
 

@@ -30,7 +30,7 @@ export default function SearchBar({ blurEvnet }) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-nowrap items-center w-full h-[40px] *:h-full *: *:font-medium *:dark:text-slate-100"
+      className="flex flex-nowrap items-center w-full h-[40px] *:h-full *: *:font-medium *:dark:text-slate-100 *:transition-colors *:duration-300"
     >
       <input
         ref={$saerch}
@@ -44,7 +44,7 @@ export default function SearchBar({ blurEvnet }) {
       />
       <button
         type="submit"
-        className="shrink-0 px-8 rounded-r-md text-[24px] bg-slate-200 hover:bg-slate-300 transition-colors duration-300 dark:bg-slate-500 dark:hover:bg-slate-400"
+        className="shrink-0 px-8 rounded-r-md text-[24px] bg-slate-200 hover:bg-slate-300 dark:bg-slate-500 dark:hover:bg-slate-400"
         title="검색"
       >
         <IoSearch aria-label="검색" />

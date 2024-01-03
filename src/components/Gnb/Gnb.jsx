@@ -29,7 +29,7 @@ export default function Gnb() {
       </div>
 
       <div className="right-box flex justify-end gap-x-[8px] md:w-[160px]">
-        <div className="toggle-box relative">
+        <div className="toggle-box relative *:transition-colors *:duration-300">
           <IconButton text="설정" callback={handleMenuToggle}>
             <RiMore2Fill aria-label="설정" />
           </IconButton>
