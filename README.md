@@ -8,3 +8,4 @@
 - react-query
 - axios
 - timeago
+- react-youtube
