@@ -62,21 +62,20 @@ export default function Video({ detail, channel }) {
 
       <div className="p-[16px] mb-[24px] rounded-xl bg-slate-100 dark:bg-slate-600">
         <dl className="flex items-center gap-x-[6px] mb-[12px] text-[14px] font-semibold">
-          {_stat.map(({ text, value }, i) => (
-            <div className="flex items-center gap-x-[6px]" key={i}>
-              <dt>{text}</dt>
-              <dd>{value}</dd>
-            </div>
-          ))}
+          {_stat &&
+            _stat.map(({ text, value }, i) => (
+              <div className="flex items-center gap-x-[6px]" key={i}>
+                <dt>{text}</dt>
+                <dd>{value}</dd>
+              </div>
+            ))}
         </dl>
 
         <p className="text-[13px] whitespace-pre-line">{description}</p>
       </div>
 
       <div className="flex flex-wrap items-center gap-x-[4px] gap-y-[8px]">
-        {tags.map((tag, i) => (
-          <Tag key={i}>#{tag}</Tag>
-        ))}
+        {tags && tags.map((tag, i) => <Tag key={i}>#{tag}</Tag>)}
       </div>
     </section>
   );

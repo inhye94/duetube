@@ -25,12 +25,13 @@ export default function Channel({ channel }) {
 
       <div>
         <dl className="mb-[24px] text-[14px] divide-y divide-slate-200 *:flex *:items-center *:gap-x-[4px] *:py-[4px] dark:divide-slate-600 ">
-          {_stat.map(({ text, value }, i) => (
-            <div key={i}>
-              <dt className="min-w-[80px]">{text}</dt>
-              <dd className="font-semibold">{value}</dd>
-            </div>
-          ))}
+          {_stat &&
+            _stat.map(({ text, value }, i) => (
+              <div key={i}>
+                <dt className="min-w-[80px]">{text}</dt>
+                <dd className="font-semibold">{value}</dd>
+              </div>
+            ))}
         </dl>
 
         <p className="mb-[36px] text-[14px] whitespace-pre-line">
@@ -38,13 +39,14 @@ export default function Channel({ channel }) {
         </p>
 
         <div className="flex flex-wrap break-keep items-center gap-x-[4px] gap-y-[8px]">
-          {channel.brandingSettings.channel.keywords
-            .split(" ")
-            .map((keywords, i) => (
-              <Tag key={i} colorType="white">
-                #{keywords}
-              </Tag>
-            ))}
+          {channel?.brandingSettings?.channel?.keywords &&
+            channel.brandingSettings.channel.keywords
+              .split(" ")
+              .map((keywords, i) => (
+                <Tag key={i} colorType="white">
+                  #{keywords}
+                </Tag>
+              ))}
         </div>
       </div>
     </section>
