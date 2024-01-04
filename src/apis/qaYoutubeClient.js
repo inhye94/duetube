@@ -4,10 +4,18 @@ import axios from "axios";
 
 export default class QaYoutubeClient {
   async search() {
-    return axios.get(`/datas/search.json`);
+    return axios.get("/datas/search.json");
   }
 
   async videos() {
-    return axios.get(`/datas/popular.json`);
+    return axios.get("/datas/popular.json");
+  }
+
+  async detail() {
+    return axios.get("/datas/detail.json");
+  }
+
+  async channel() {
+    return axios.get("/datas/channel.json");
   }
 }

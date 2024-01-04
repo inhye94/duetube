@@ -5,7 +5,8 @@ import { FaCommentDots } from "react-icons/fa";
 import { formatAgo } from "../../util/date";
 
 export default function VideoCard({ video }) {
-  const { title, channelTitle, publishedAt, thumbnails } = video.snippet;
+  const { title, channelTitle, publishedAt, thumbnails, channelId } =
+    video.snippet;
 
   return (
     <article className="group w-full h-full px-[8px] py-[16px] rounded-xl">
@@ -13,6 +14,7 @@ export default function VideoCard({ video }) {
         className="flex flex-col-reverse h-full"
         to={`/video/${video.id}`}
         title={title}
+        state={{ channelId }}
       >
         <div className="flex flex-col basis-full mt-[12px]">
           <h3 className="mb-[4px] text-[16px] font-bold line-clamp-2">

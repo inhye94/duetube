@@ -9,6 +9,14 @@ export default class Youtube {
     return keyword ? this.#searchByKeyword(keyword) : this.#mostPopular();
   }
 
+  async detail(videoId) {
+    return this.#detailByVedioId(videoId);
+  }
+
+  async channel(channelId) {
+    return this.#channelById(channelId);
+  }
+
   #searchByKeyword(keyword) {
     // NOTE: 네트워크 통신할 때, 유효한 포맷으로 변경
     return this.apiClient
@@ -35,5 +43,27 @@ export default class Youtube {
         },
       })
       .then((res) => res.data.items);
+  }
+
+  #detailByVedioId(videoId) {
+    return this.apiClient
+      .detail({
+        params: {
+          part: "snippet,contentDetails,statistics",
+          id: videoId,
+        },
+      })
+      .then((res) => res.data.items[0]);
+  }
+
+  #channelById(channelId) {
+    return this.apiClient
+      .channel({
+        params: {
+          part: "snippet,contentDetails,statistics,brandingSettings",
+          id: channelId,
+        },
+      })
+      .then((res) => res.data.items[0]);
   }
 }
