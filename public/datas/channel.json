@@ -1,0 +1,55 @@
+{
+  "kind": "youtube#channelListResponse",
+  "etag": "RwIM6hkEjDnPIg0yHPLNESD0w1s",
+  "pageInfo": {
+    "totalResults": 1,
+    "resultsPerPage": 5
+  },
+  "items": [
+    {
+      "kind": "youtube#channel",
+      "etag": "HJxxTV0HnWB1z5mmhwRDQZEv4gg",
+      "id": "UCXteMTpHAvyDP05G0QULuZA",
+      "snippet": {
+        "title": "Silica Gel 실리카겔",
+        "description": "4-piece band based on Seoul, South Korea\n\n김건재 Kim Geonjae 金健在 (dr)\n김춘추 Kim Chunchu 金春秋 (g/v)\n김한주 Kim Hanjoo 金韓主 (k/v)\n최웅희 Choi Woonghee 崔熊熙 (b)",
+        "customUrl": "@silicagel",
+        "publishedAt": "2020-08-21T07:55:50.926251Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://yt3.ggpht.com/Kv_mhLwqwpIvW0ORWJmLOBiDWNS4xLppPWqg4JQ85cBZil_s5LNShUDNgNpFCCL0pnisCSERn9Y=s88-c-k-c0x00ffffff-no-nd-rj",
+            "width": 88,
+            "height": 88
+          },
+          "medium": {
+            "url": "https://yt3.ggpht.com/Kv_mhLwqwpIvW0ORWJmLOBiDWNS4xLppPWqg4JQ85cBZil_s5LNShUDNgNpFCCL0pnisCSERn9Y=s240-c-k-c0x00ffffff-no-nd-rj",
+            "width": 240,
+            "height": 240
+          },
+          "high": {
+            "url": "https://yt3.ggpht.com/Kv_mhLwqwpIvW0ORWJmLOBiDWNS4xLppPWqg4JQ85cBZil_s5LNShUDNgNpFCCL0pnisCSERn9Y=s800-c-k-c0x00ffffff-no-nd-rj",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "localized": {
+          "title": "Silica Gel 실리카겔",
+          "description": "4-piece band based on Seoul, South Korea\n\n김건재 Kim Geonjae 金健在 (dr)\n김춘추 Kim Chunchu 金春秋 (g/v)\n김한주 Kim Hanjoo 金韓主 (k/v)\n최웅희 Choi Woonghee 崔熊熙 (b)"
+        },
+        "country": "KR"
+      },
+      "contentDetails": {
+        "relatedPlaylists": {
+          "likes": "",
+          "uploads": "UUXteMTpHAvyDP05G0QULuZA"
+        }
+      },
+      "statistics": {
+        "viewCount": "25129637",
+        "subscriberCount": "66400",
+        "hiddenSubscriberCount": false,
+        "videoCount": "61"
+      }
+    }
+  ]
+}
