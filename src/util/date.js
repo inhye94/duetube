@@ -16,7 +16,7 @@ export function formatDate(dateAt) {
 
   const _year = date.getFullYear();
   const _month = fullLength("" + (date.getMonth() + 1));
-  const _day = fullLength("" + date.getDay());
+  const _day = fullLength("" + date.getDate());
 
   return [_year, _month, _day].join(".");
 }
