@@ -24,7 +24,7 @@ export default function Channel({ channel }) {
       </header>
 
       <div>
-        <dl className="mb-[24px] text-[14px] divide-y divide-slate-200 *:flex *:items-center *:gap-x-[4px] *:py-[4px] dark:divide-slate-600 ">
+        <dl className="mb-[24px] text-[14px] divide-y divide-slate-200 *:flex *:items-center *:gap-x-[4px] *:py-[4px] dark:divide-slate-500 ">
           {_stat &&
             _stat.map(({ text, value }, i) => (
               <div key={i}>
