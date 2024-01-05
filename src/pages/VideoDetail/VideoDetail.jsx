@@ -20,6 +20,7 @@ export default function VideoDetail() {
     queryKey: ["channel"],
     queryFn: async () => youtube.channel(video.snippet.channelId),
     refetchOnWindowFocus: false,
+    staleTime: 1000 * 60 * 5,
   });
 
   return (

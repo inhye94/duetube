@@ -15,6 +15,7 @@ export default function Videos() {
     queryKey: ["videos", keyword],
     queryFn: async () => youtube.search(keyword),
     refetchOnWindowFocus: false,
+    staleTime: 1000 * 60 * 1,
   });
 
   return (
