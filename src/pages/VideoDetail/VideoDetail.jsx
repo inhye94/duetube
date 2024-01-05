@@ -17,7 +17,7 @@ export default function VideoDetail() {
     error,
     data: channel,
   } = useQuery({
-    queryKey: ["channel"],
+    queryKey: ["channel", video],
     queryFn: async () => youtube.channel(video.snippet.channelId),
     refetchOnWindowFocus: false,
     staleTime: 1000 * 60 * 5,
