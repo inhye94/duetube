@@ -12,7 +12,7 @@ export function formatDate(dateAt) {
     return str.padStart(2, "0");
   };
 
-  const date = new Date();
+  const date = new Date(dateAt);
 
   const _year = date.getFullYear();
   const _month = fullLength("" + (date.getMonth() + 1));
