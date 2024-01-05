@@ -36,7 +36,7 @@ export default class Youtube {
     return this.apiClient
       .videos({
         params: {
-          part: "snippet",
+          part: "snippet,statistics",
           chart: "mostPopular",
           regionCode: "KR",
           maxResults: 25,

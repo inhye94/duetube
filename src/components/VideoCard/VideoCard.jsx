@@ -5,8 +5,23 @@ import { FaCommentDots } from "react-icons/fa";
 import { formatAgo } from "../../util/date";
 
 export default function VideoCard({ video }) {
-  const { title, channelTitle, publishedAt, thumbnails, channelId } =
-    video.snippet;
+  const { title, channelTitle, publishedAt, thumbnails } = video.snippet;
+
+  const { likeCount, viewCount, commentCount } = video.statistics;
+  const _stat = [
+    {
+      icon: <IoHeart aria-label="좋아요" />,
+      value: setStatsFormat(likeCount),
+    },
+    {
+      icon: <IoRocketSharp aria-label="조회수" />,
+      value: setStatsFormat(viewCount),
+    },
+    {
+      icon: <FaCommentDots aria-label="댓글수" />,
+      value: setStatsFormat(commentCount),
+    },
+  ];
 
   return (
     <article className="group w-full h-full px-[8px] py-[16px] rounded-xl">
@@ -14,7 +29,7 @@ export default function VideoCard({ video }) {
         className="flex flex-col-reverse h-full"
         to={`/video/${video.id}`}
         title={title}
-        state={{ channelId }}
+        state={{ video }}
       >
         <div className="flex flex-col basis-full mt-[12px]">
           <h3 className="mb-[4px] text-[16px] font-bold line-clamp-2">
@@ -27,18 +42,13 @@ export default function VideoCard({ video }) {
 
           {video.statistics && (
             <dl className="flex items-center gap-x-[6px] mt-[12px] text-[12px] opacity-70">
-              <dt>
-                <IoHeart aria-label="좋아요" />
-              </dt>
-              <dd>{setStatsFormat(video.statistics.likeCount)}</dd>
-              <dt>
-                <IoRocketSharp aria-label="조회수" />
-              </dt>
-              <dd>{setStatsFormat(video.statistics.viewCount)}</dd>
-              <dt>
-                <FaCommentDots aria-label="댓글수" />
-              </dt>
-              <dd>{setStatsFormat(video.statistics.commentCount)}</dd>
+              {_stat &&
+                _stat.map(({ icon, value }) => (
+                  <div className="flex items-center gap-x-[6px]" key={value}>
+                    <dt>{icon}</dt>
+                    <dd>{value}</dd>
+                  </div>
+                ))}
             </dl>
           )}
         </div>
@@ -57,6 +67,8 @@ export default function VideoCard({ video }) {
 }
 
 const setStatsFormat = (value) => {
+  if (!value) return 0;
+
   if (value.length < 3) {
     return value;
   } else if (value.length < 7) {
