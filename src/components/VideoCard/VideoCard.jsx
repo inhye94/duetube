@@ -7,22 +7,6 @@ import { formatAgo } from "../../util/date";
 export default function VideoCard({ video }) {
   const { title, channelTitle, publishedAt, thumbnails } = video.snippet;
 
-  const { likeCount, viewCount, commentCount } = video.statistics;
-  const _stat = [
-    {
-      icon: <IoHeart aria-label="좋아요" />,
-      value: setStatsFormat(likeCount),
-    },
-    {
-      icon: <IoRocketSharp aria-label="조회수" />,
-      value: setStatsFormat(viewCount),
-    },
-    {
-      icon: <FaCommentDots aria-label="댓글수" />,
-      value: setStatsFormat(commentCount),
-    },
-  ];
-
   return (
     <article className="group w-full h-full px-[8px] py-[16px] rounded-xl">
       <Link
@@ -42,13 +26,18 @@ export default function VideoCard({ video }) {
 
           {video.statistics && (
             <dl className="flex items-center gap-x-[6px] mt-[12px] text-[12px] opacity-70">
-              {_stat &&
-                _stat.map(({ icon, value }) => (
-                  <div className="flex items-center gap-x-[6px]" key={value}>
-                    <dt>{icon}</dt>
-                    <dd>{value}</dd>
-                  </div>
-                ))}
+              <dt>
+                <IoHeart aria-label="좋아요" />
+              </dt>
+              <dd>{setStatsFormat(video.statistics.likeCount)}</dd>
+              <dt>
+                <IoRocketSharp aria-label="조회수" />
+              </dt>
+              <dd>{setStatsFormat(video.statistics.viewCount)}</dd>
+              <dt>
+                <FaCommentDots aria-label="댓글수" />
+              </dt>
+              <dd>{setStatsFormat(video.statistics.commentCount)}</dd>
             </dl>
           )}
         </div>
