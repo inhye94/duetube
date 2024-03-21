@@ -12,7 +12,39 @@ Youtube Data API로 리액트 프로젝트 제작
   - 다크모드 지원
 ```
 
-[💜 Duetube 💜](https://incomparable-concha-72a360.netlify.app/)
+[💜 Duetube 💜](https://duetube.netlify.app/)
+
+<details>
+<summary>페이지 대표 이미지</summary>
+
+<img width="1680" alt="스크린샷 2024-03-21 오후 3 13 49" src="https://github.com/DuetoPark/react-duetube/assets/69448900/066c06bd-cd2a-4f03-9d86-e02496ddbac7">
+<img width="1680" alt="스크린샷 2024-03-21 오후 3 14 14" src="https://github.com/DuetoPark/react-duetube/assets/69448900/99487715-12d9-458e-a79c-e83418557244">
+<img width="1680" alt="스크린샷 2024-03-21 오후 3 14 25" src="https://github.com/DuetoPark/react-duetube/assets/69448900/cdb59ad9-cfbc-4805-baae-693d9a3da329">
+</details>
+
+<br/>
+
+## 🦄 프로젝트 관리 방법
+
+### 문제와 해결
+
+[GitHub WIKI]()
+
+<details>
+<summary>GitHub WIKI 예시 이미지 및 링크</summary>
+
+<img width="1000" alt="스크린샷 2024-03-21 오후 3 45 25" src="https://github.com/DuetoPark/super-super-glue/assets/69448900/c795a2b1-97b6-4979-a74e-646ea4b56979">
+</details>
+
+<br/>
+
+## 🤩 DB
+
+### 외부 API
+
+- Youtube Data API v3
+
+<br/>
 
 ## 📦 사용한 packages
 
@@ -35,6 +67,8 @@ Youtube Data API로 리액트 프로젝트 제작
 - timeago
 - react-youtube
 
+<br/>
+
 ## 📬 주소 별 페이지
 
 | 페이지 주소      | 페이지 종류   | 용도                  |
@@ -42,6 +76,8 @@ Youtube Data API로 리액트 프로젝트 제작
 | /                | 메인          | 인기 비디오 노출      |
 | /search/:keyword | 비디오 리스트 | 키워드 검색 결과 출력 |
 | /video/:videoId  | 비디오 상세   | 비디오 상세 페이지    |
+
+<br/>
 
 ## 🎨 페이지 구성 및 기능
 
