@@ -50,6 +50,59 @@
 ✅ 반응형
 ```
 
+### 1. 다크모드 지원
+
+#### useEffect
+
+- localStorage.theme == ‘dark’ 또는 window가 다크모드인 경우
+    - state를 true로 변경
+    - localStorage를 true로 변경
+
+#### toggleButton
+
+- clickEvent Callback
+    - state를 true/false로 변경
+    - localStorage를 true/false로 변경
+- 다크모드 구현 화면
+
+<details>
+<summary>다크모드 구현 화면</summary>
+
+https://github.com/DuetoPark/react-duetube/assets/69448900/b034002c-c143-48a2-ba5d-a443f832c009
+
+</details>
+
+<br/>
+
+### 2. 인기 동영상 추천과 동영상 검색
+
+- Youtube Data API의 `search 메소드` 사용
+- 검색 페이지도 동일한 메소드를 사용하므로 구분이 필요하다
+    - url의 keyword params 유무
+    - 있는 경우, 검색 페이지
+    - 없는 경우, 인기 동영상 추천 페이지
+
+<details>
+<summary>메인 페이지와 검색 구현 화면</summary>
+
+https://github.com/DuetoPark/react-duetube/assets/69448900/ebdc5c24-b7b9-4520-89ac-09a232985cd3
+
+</details>
+
+<br/>
+
+### 3. 동영상 상세정보 출력
+
+- Youtube Data API의 `detail와 channel 메소드` 사용
+- useQueries 로 구현
+
+<details>
+<summary>메인 페이지와 검색 구현 화면</summary>
+
+https://github.com/DuetoPark/react-duetube/assets/69448900/d8aaeda8-866c-4a73-83ff-866c7059fb3e
+
+</details>
+
 <br/>
 
 ## 🤩 DB
