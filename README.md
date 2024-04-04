@@ -1,5 +1,3 @@
-# 리액트로 유튜브 만들기
-
 ```
 ✅ Youtube Data API로 리액트 프로젝트 제작
 
@@ -7,11 +5,9 @@
 - 구현환경: React, TailwindCSS, Youtube Data API
 - 배포방법: Netlify
 - 특징
-  - 다크모드 지원
-  - 인기 동영상 추천
-  - 동영상 검색
-  - 동영상 상세정보 출력
-  - 반응형
+  - 폴더 구조를 체계적으로 설계
+  - qa용/실서버용 코드 관리
+  - context를 생성해서 다크모드를 구현
 ```
 
 [💜 Duetube 💜](https://duetube.netlify.app/)
@@ -46,7 +42,6 @@
 ✅ 다크모드 지원
 ✅ 동영상 검색
 ✅ 동영상 상세정보 출력
-✅ 반응형
 ```
 
 <details>
@@ -73,6 +68,42 @@ https://github.com/DuetoPark/react-duetube/assets/69448900/d8aaeda8-866c-4a73-83
 <br/>
 
 ## 🚀 구현
+
+- 폴더 구조
+  - 크게 기능(apis/context/util)과 컴포넌트(component/modules/page)로 분리
+  - button, tag 와 같은 범용 컴포넌트는 modules 폴더에 관리
+- qa/실서버 코드 관리
+  - qa 버전과 실서비스 버전으로 파일 분리
+  - `boolean` 값을 가지는 isTest 변수 생성하여, 값에 따라 qa/실서버 코드 전환
+- 다크모드
+  - `DarkModeProvider` 생성해 다크모드 상태와 toggle하는 메소드 구현
+  - `localStorage` 사용해 다크모드 상태 저장
+  - `window.matchMedia` 사용해 유저 PC가 다크모드인지 확인하고 자동으로 toggle 구현
+- API 호출 방지
+  - `useRef`에 이전 검색어를 저장해 검색어가 다른 경우에만 API 호출
+- API 구현
+  - 데이터 호출(client)용 코드와 데이터 후처리 & 에러처리(api)용 코드 분리
+  - `useQuery`에 `async/await` 사용하여 2개의 데이터를 순서대로 호출
+  - 2개의 데이터를 하나의 객체로 병합하여 return해, `useQuery`에 의한 re-render 횟수를 2회에서 1회로 감소
+
+<br/>
+
+## 👀 프로젝트 구조
+
+```
+📦src
+ ┣ 📂apis ------------------------------- NOTE: 특정 동작을 담당
+ ┣ 📂component -------------------------- NOTE: 컴포넌트
+ ┣ 📂context ---------------------------- NOTE: 컨텍스트
+ ┣ 📂modules ---------------------------- NOTE: 범용 컴포넌트 (버튼, 태그, ...)
+ ┣ 📂page ------------------------------- NOTE: 페이지 컴포넌트
+ ┣ 📂util ------------------------------- NOTE: 공통 함수
+ ┣ 📜App.js
+ ┣ 📜index.css
+ ┣ 📜index.js
+ ┣ 📜reportWebVitals.js
+ ┗ 📜setupTests.js
+```
 
 <br/>
 
