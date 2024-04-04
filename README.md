@@ -1,13 +1,12 @@
 ```
-✅ Youtube Data API로 리액트 프로젝트 제작
+✅ API 관련된 코드 관리
 
 - 제작기간: 2023.12.26 ~ 2024.01.08
 - 구현환경: React, TailwindCSS, Youtube Data API
 - 배포방법: Netlify
 - 특징
-  - 폴더 구조를 체계적으로 설계
-  - qa용/실서버용 코드 관리
-  - context를 생성해서 다크모드를 구현
+  - qa/실서버 코드 관리
+  - 검색 api 호출 방지
 ```
 
 [💜 Duetube 💜](https://duetube.netlify.app/)
