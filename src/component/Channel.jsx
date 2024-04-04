@@ -1,9 +1,10 @@
 import React from "react";
-import Tag from "../Tag";
-import { formatDate } from "../../util/date";
+import Tag from "../modules/Tag";
+import { formatDate } from "../util/date";
 
 export default function Channel({ channel }) {
-  const { title, description, publishedAt, thumbnails } = channel.snippet;
+  const { title, thumbnails, description, publishedAt } = channel.snippet;
+
   const { subscriberCount, videoCount } = channel.statistics;
 
   const _stat = [
@@ -19,7 +20,7 @@ export default function Channel({ channel }) {
         <img
           className="w-full max-w-[200px] rounded-full object-cover"
           src={thumbnails.medium.url}
-          alt={title}
+          alt={title + " 썸네일"}
         />
       </header>
 

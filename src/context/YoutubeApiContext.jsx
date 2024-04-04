@@ -1,21 +1,23 @@
 import { createContext, useContext } from "react";
-import Youtube from "../apis/Youtube";
-import YoutubeClient from "../apis/youtubeClient";
+import QaYoutubeClient from "../apis/Youtube/qaYoutubeClient";
+import YoutubeClient from "../apis/Youtube/youtubeClient";
+import YoutubeApi from "../apis/Youtube/youtubeApi";
 
-export const YoutubeContext = createContext();
+const isTest = false; // NOTE: qa/실서비스 전환 (true > qa, false > 실서비스)
 
-const client = new YoutubeClient();
+const qaYoutubeClient = new QaYoutubeClient();
+const youtubeClient = new YoutubeClient();
 
-const youtube = new Youtube(client);
+const youtube = new YoutubeApi(isTest ? qaYoutubeClient : youtubeClient);
 
-export function YoutubeApiProvider({ children }) {
+const YoutubeApiContext = createContext();
+
+export function YoutubeApiContextProvider({ children }) {
   return (
-    <YoutubeContext.Provider value={{ youtube }}>
+    <YoutubeApiContext.Provider value={{ youtube }}>
       {children}
-    </YoutubeContext.Provider>
+    </YoutubeApiContext.Provider>
   );
 }
 
-export function useYoutubeApi() {
-  return useContext(YoutubeContext);
-}
+export const useYoutubeApi = () => useContext(YoutubeApiContext);

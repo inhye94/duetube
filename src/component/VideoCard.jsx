@@ -1,20 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { formatAgo } from "../util/date";
 import { IoHeart, IoRocketSharp } from "react-icons/io5";
 import { FaCommentDots } from "react-icons/fa";
-import { formatAgo } from "../../util/date";
 
 export default function VideoCard({ video }) {
-  const { title, channelTitle, publishedAt, thumbnails, channelId } =
-    video.snippet;
+  const { title, channelTitle, publishedAt, thumbnails } = video.snippet;
 
   return (
     <article className="group w-full h-full px-[8px] py-[16px] rounded-xl">
       <Link
         className="flex flex-col-reverse h-full"
-        to={`/video/${video.id}`}
         title={title}
-        state={{ channelId }}
+        to={`/watch/${video.id}`}
       >
         <div className="flex flex-col basis-full mt-[12px]">
           <h3 className="mb-[4px] text-[16px] font-bold line-clamp-2">

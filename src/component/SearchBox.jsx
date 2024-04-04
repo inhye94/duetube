@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SearchForm from "./SearchForm";
-import IconButton from "../IconButton";
+import IconButton from "../modules/IconButton";
 import { IoSearch } from "react-icons/io5";
 import { IoMdClose } from "react-icons/io";
 import { debounce } from "lodash";

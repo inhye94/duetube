@@ -1,5 +1,3 @@
-// NOTE: Videos 컴포넌트에서 많이 노출되는 api 관련 코드 & 가독성 개선
-
 import axios from "axios";
 
 export default class YoutubeClient {
@@ -16,7 +14,7 @@ export default class YoutubeClient {
     return this.httpClient.get("search", params);
   }
 
-  async videos(params) {
+  async popular(params) {
     return this.httpClient.get("videos", params);
   }
 

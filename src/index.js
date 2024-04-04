@@ -3,14 +3,12 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Videos from "./pages/Videos/Videos";
-import VideoDetail from "./pages/VideoDetail/VideoDetail";
-import NotFound from "./pages/NotFound/NotFound";
+import Videos from "./page/Videos";
+import VideoDetail from "./page/VideoDetail";
+import NotFound from "./page/NotFound/NotFound";
 import DarkModeProvider from "./context/DarkModeContext";
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const router = createBrowserRouter([
   {
@@ -19,17 +17,21 @@ const router = createBrowserRouter([
     errorElement: <NotFound />,
     children: [
       { index: true, element: <Videos /> },
-      { path: "videos", element: <Videos /> },
       { path: "/search/:keyword", element: <Videos /> },
-      { path: "/video/:videoId", element: <VideoDetail /> },
+      { path: "/watch/:videoId", element: <VideoDetail /> },
     ],
   },
 ]);
 
+const queryClient = new QueryClient();
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <DarkModeProvider>
-      <RouterProvider router={router} />
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+      </QueryClientProvider>
     </DarkModeProvider>
   </React.StrictMode>
 );

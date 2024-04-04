@@ -1,21 +1,21 @@
 import React, { useState } from "react";
+import { useDarkModeContext } from "../context/DarkModeContext";
 import Logo from "./Logo";
-import { RiMore2Fill } from "react-icons/ri";
-import IconButton from "../IconButton";
-import ToggleButton from "../ToggleButton";
+import IconButton from "../modules/IconButton";
+import ToggleButton from "../modules/ToggleButton";
 import SearchBox from "./SearchBox";
-import { useDarkModeContext } from "../../context/DarkModeContext";
+import { RiMore2Fill } from "react-icons/ri";
 
 export default function Gnb() {
-  const { _darkMode, toggleDarkMode } = useDarkModeContext();
+  const { darkMode, toggleDarkMode } = useDarkModeContext();
   const [_menuToggle, setMenuToggle] = useState(false);
 
   const handleMenuToggle = () => {
-    setMenuToggle((prev) => !prev);
+    setMenuToggle(!_menuToggle);
   };
 
   const handleDarkMode = () => {
-    toggleDarkMode();
+    toggleDarkMode(!darkMode);
   };
 
   return (
@@ -48,7 +48,7 @@ export default function Gnb() {
               <li>
                 <ToggleButton
                   text="다크모드"
-                  isChecked={_darkMode}
+                  isChecked={darkMode}
                   callback={handleDarkMode}
                 />
               </li>

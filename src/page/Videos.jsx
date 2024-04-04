@@ -1,7 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
+import React from "react";
 import { useParams } from "react-router-dom";
-import VideoCard from "../../components/VideoCard/VideoCard";
-import { useYoutubeApi } from "../../context/YoutubeApiContext";
+import { useYoutubeApi } from "../context/YoutubeApiContext";
+import VideoCard from "../component/VideoCard";
 
 export default function Videos() {
   const { keyword } = useParams();
@@ -27,11 +28,11 @@ export default function Videos() {
       </header>
 
       <ul className="flex flex-wrap items-stretch w-full">
-        {error && <p>에러 났서요!</p>}
         {isLoading && <p className="loading">Loading!!!</p>}
+        {error && <p className="loading">에러났서요!!!</p>}
         {videos &&
-          videos.map((video, i) => (
-            <li className="basis-full sm:basis-1/2 md:basis-1/3" key={video.id}>
+          videos.map((video) => (
+            <li key={video.id} className="basis-full sm:basis-1/2 md:basis-1/3">
               <VideoCard video={video} />
             </li>
           ))}
