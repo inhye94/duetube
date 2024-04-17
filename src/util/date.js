@@ -7,16 +7,22 @@ export function formatAgo(date, lang = "en_US") {
   return format(date, lang);
 }
 
-export function formatDate(dateAt) {
-  const fullLength = (str) => {
-    return str.padStart(2, "0");
+const fullLength = (str) => {
+  return String(str).padStart(2, "0");
+};
+
+const genDate = (dateAt) => {
+  return {
+    year: new Date(dateAt).getFullYear(),
+    month: new Date(dateAt).getMonth() + 1,
+    date: new Date(dateAt).getDate(),
   };
+};
 
-  const date = new Date(dateAt);
-
-  const _year = date.getFullYear();
-  const _month = fullLength("" + (date.getMonth() + 1));
-  const _day = fullLength("" + date.getDate());
-
-  return [_year, _month, _day].join(".");
+export function formatDate(dateAt) {
+  return [
+    genDate(dateAt).year,
+    fullLength(genDate(dateAt).month),
+    fullLength(genDate(dateAt).date),
+  ].join(".");
 }
