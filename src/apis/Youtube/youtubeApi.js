@@ -4,7 +4,11 @@ export default class YoutubeApi {
   }
 
   async search(keyword) {
-    return keyword ? this.#searchByKeyword(keyword) : this.#mostPopular();
+    if (keyword) {
+      return this.#searchByKeyword(keyword);
+    }
+
+    return this.#mostPopular();
   }
 
   async detail(videoId) {
