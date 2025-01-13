@@ -1,68 +1,25 @@
+# Duetube
+
+**Tanstack-Query로 데이터 fetching을 처리하는 유튜브 클론코딩 프로젝트**
+
+📎 [배포 링크](https://duetube.netlify.app/)
+
 ```
 2023.12 - 2024.01 (약 2개월, 개인 프로젝트)
 
-
 [설명 및 제작 목표]
-- 설명: Tanstack query로 데이터 fetching을 처리하는 유튜브 클론코딩 프로젝트
-- 제작 목표: 부족했던 데이터 후처리 코드의 가독성과 안정성을 개선
+- 설명: Tanstack-Query로 데이터 fetching을 처리하는 유튜브 클론코딩 프로젝트
+- 제작 목표: 부족했던 데이터 전처리 코드의 가독성과 안정성을 개선
 
 [사용 스택]
-- 리액트: 재사용 가능한 컴포넌트를 제작하고 싶었습니다.
-- tanstack query: 컴포넌트 내부에 별도의 state 선언 없이 error/loadnig/success 상태를 처리하고 싶었습니다.
+- React: 재사용 가능한 컴포넌트를 제작하고 싶었습니다.
+- Tanstack-Query: 컴포넌트 내부에 별도의 state 선언 없이 error/loadnig/success 상태를 처리하고 싶었습니다.
+- TailwindCSS: 빠른 스타일링을 위해 사용했습니다.
 
 [결과]
 - then이 반환한 promise를 사용하여 데이터 후처리하여 코드 안정성 개선
 - QA/실서버 코드를 분리하여 디버깅이 쉽도록 개선
 ```
-
-[💜 Duetube 💜](https://duetube.netlify.app/)
-
-<details>
-<summary>페이지 대표 이미지</summary>
-
-<img width="1680" alt="스크린샷 2024-03-21 오후 3 13 49" src="https://github.com/DuetoPark/react-duetube/assets/69448900/066c06bd-cd2a-4f03-9d86-e02496ddbac7">
-<img width="1680" alt="스크린샷 2024-03-21 오후 3 14 14" src="https://github.com/DuetoPark/react-duetube/assets/69448900/99487715-12d9-458e-a79c-e83418557244">
-<img width="1680" alt="스크린샷 2024-03-21 오후 3 14 25" src="https://github.com/DuetoPark/react-duetube/assets/69448900/cdb59ad9-cfbc-4805-baae-693d9a3da329">
-</details>
-
-<br/>
-
-## 🦄 프로젝트 관리 방법
-
-### 문제와 해결
-
-[GitHub WIKI]()
-
-<details>
-<summary>GitHub WIKI 예시 이미지 및 링크</summary>
-
-<img width="1000" alt="스크린샷 2024-03-21 오후 3 45 25" src="https://github.com/DuetoPark/super-super-glue/assets/69448900/c795a2b1-97b6-4979-a74e-646ea4b56979">
-</details>
-
-<br/>
-
-## 🧚 기능과 구현 화면
-
-<details>
-<summary>다크모드 구현 화면</summary>
-
-https://github.com/DuetoPark/react-duetube/assets/69448900/b034002c-c143-48a2-ba5d-a443f832c009
-
-</details>
-
-<details>
-<summary>메인 페이지와 검색 구현 화면</summary>
-
-https://github.com/DuetoPark/react-duetube/assets/69448900/ebdc5c24-b7b9-4520-89ac-09a232985cd3
-
-</details>
-
-<details>
-<summary>동영상 상세정보 구현 화면</summary>
-
-https://github.com/DuetoPark/react-duetube/assets/69448900/d8aaeda8-866c-4a73-83ff-866c7059fb3e
-
-</details>
 
 <br/>
 
@@ -76,19 +33,22 @@ https://github.com/DuetoPark/react-duetube/assets/69448900/d8aaeda8-866c-4a73-83
   - 임시변수 제거
   - 형변환 명시적으로 표현
 
-<br/>
+## 🧚 기능과 구현 화면
 
-## 🍀 기능
+| 다크모드 구현 화면                                                                                                                                                                           |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![라이트 모드](https://github.com/user-attachments/assets/ace47821-6924-4de1-bd0b-32c5dc6e8da8)![다크 모드](https://github.com/user-attachments/assets/51b8a165-b335-4d50-b7e6-e7c89ebdba22) |
+| - **DarkModeProvider** 생성해 다크모드 상태와 toggle하는 메소드 구현<br/>- **localStorage** 사용해 다크모드 상태 저장                                                                        |
 
-- 다크모드
-  - **DarkModeProvider** 생성해 다크모드 상태와 toggle하는 메소드 구현
-  - **localStorage** 사용해 다크모드 상태 저장
-- 검색
-  - **useRef에 이전 검색어를 저장해 input의 state와 비교**하여 검색 API 호출
-- 비디오 상세 정보
-  - 필요한 데이터 : 비디오 상세 + 채널
-  - useQuery에 async/await 사용하여 2개의 데이터를 순서대로 호출
-  - 2개의 데이터를 하나의 객체로 병합하여 return해, useQuery에 의한 re-render 횟수를 2회에서 1회로 감소
+| 메인 페이지                                                                                     |
+| ----------------------------------------------------------------------------------------------- |
+| ![메인 페이지](https://github.com/user-attachments/assets/cdb44e3e-4847-4711-ac37-2b48501a6c1b) |
+| - **useRef에 이전 검색어를 저장해 input의 state와 비교**하여 검색 API 호출                      |
+
+| 동영상 상세 페이지                                                                                                                                                                                                |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![메인 페이지](https://github.com/user-attachments/assets/ac0fdcd7-7df7-486c-a2f9-8780a5774086)                                                                                                                   |
+| - 필요한 데이터 : 비디오 상세 + 채널<br/>- useQuery에 async/await 사용하여 2개의 데이터를 순서대로 호출<br/>- 2개의 데이터를 하나의 객체로 병합하여 return해, useQuery에 의한 re-render 횟수를 2회에서 1회로 감소 |
 
 <br/>
 
