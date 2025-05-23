@@ -1,8 +1,8 @@
 import React from "react";
+import { FaCommentDots } from "react-icons/fa";
+import { IoHeart, IoRocketSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { formatAgo } from "../util/date";
-import { IoHeart, IoRocketSharp } from "react-icons/io5";
-import { FaCommentDots } from "react-icons/fa";
 
 export default function VideoCard({ video }) {
   const { title, channelTitle, publishedAt, thumbnails } = video.snippet;
@@ -67,3 +67,5 @@ const setStatsFormat = (value) => {
     return `${(value / 1000000).toFixed(1)}억`;
   }
 };
+
+export { setStatsFormat };

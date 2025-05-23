@@ -48,4 +48,12 @@ describe("VideoCard", () => {
     userEvent.click(card);
     expect(screen.getByText(`/watch/${mockVideo.id}`)).toBeInTheDocument();
   });
+
+  it("renders grid type correctly", () => {
+    const { asFragment } = render(
+      withRouter(<Route path="/" element={<VideoCard video={mockVideo} />} />)
+    );
+
+    expect(asFragment()).toMatchSnapshot();
+  });
 });
