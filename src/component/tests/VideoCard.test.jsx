@@ -1,37 +1,18 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import React from "react";
-import { MemoryRouter, Route, Routes, useLocation } from "react-router-dom";
+import { Route, useLocation } from "react-router-dom";
+import { withRouter } from "../../tests/utils";
+import { mockVideo } from "../../tests/videos";
 import { formatAgo } from "../../util/date";
 import VideoCard from "../VideoCard";
 
 describe("VideoCard", () => {
-  const mockVideo = {
-    id: "12345",
-    snippet: {
-      title: "Test Video",
-      channelTitle: "Test Channel",
-      publishedAt: "2023-10-01T00:00:00Z",
-      thumbnails: {
-        medium: {
-          url: "https://example.com/thumbnail.jpg",
-        },
-      },
-    },
-    statistics: {
-      likeCount: "1000",
-      viewCount: "5000",
-      commentCount: "200",
-    },
-  };
-
   const { title, channelTitle, publishedAt, thumbnails } = mockVideo.snippet;
 
   it("renders video items", () => {
     render(
-      <MemoryRouter>
-        <VideoCard video={mockVideo} />
-      </MemoryRouter>
+      withRouter(<Route path="/" element={<VideoCard video={mockVideo} />} />)
     );
 
     const image = screen.getByRole("img");
@@ -52,15 +33,15 @@ describe("VideoCard", () => {
     }
 
     render(
-      <MemoryRouter initialEntries={["/"]}>
-        <Routes>
+      withRouter(
+        <>
           <Route path="/" element={<VideoCard video={mockVideo} />} />
           <Route
             path={`/watch/${mockVideo.id}`}
             element={<LocationStateDisplay />}
           />
-        </Routes>
-      </MemoryRouter>
+        </>
+      )
     );
 
     const card = screen.getByRole("link");
