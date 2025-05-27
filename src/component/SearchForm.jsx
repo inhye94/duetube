@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { IoSearch } from "react-icons/io5";
 import { useNavigate, useParams } from "react-router-dom";
 
-export default function SearchBar({ blurEvnet }) {
+export default function SearchBar({ blurEvent }) {
   const _prevText = useRef(null);
   const $input = useRef(null);
   const { keyword } = useParams();
@@ -36,7 +36,7 @@ export default function SearchBar({ blurEvnet }) {
         ref={$input}
         value={_text}
         onChange={() => setText($input.current.value)}
-        onBlur={() => blurEvnet()}
+        onBlur={() => blurEvent()}
         className="grow w-[50px] px-[16px] rounded-l-md text-[16px] text-purple-600 bg-slate-100 caret-purple-600 placeholder:text-slate-400 dark:bg-slate-600"
         placeholder="검색"
         autoComplete="off"
@@ -44,7 +44,8 @@ export default function SearchBar({ blurEvnet }) {
       <button
         type="submit"
         className="shrink-0 px-8 rounded-r-md text-[24px] bg-slate-200 hover:bg-slate-300 dark:bg-slate-500 dark:hover:bg-slate-400"
-        title="검색"
+        title="검색 버튼을 눌러주세요"
+        aria-label="검색"
       >
         <IoSearch aria-label="검색" />
       </button>

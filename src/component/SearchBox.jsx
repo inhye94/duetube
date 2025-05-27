@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
-import SearchForm from "./SearchForm";
-import IconButton from "../modules/IconButton";
-import { IoSearch } from "react-icons/io5";
-import { IoMdClose } from "react-icons/io";
 import { debounce } from "lodash";
+import React, { useEffect, useState } from "react";
+import { IoMdClose } from "react-icons/io";
+import { IoSearch } from "react-icons/io5";
+import IconButton from "../modules/IconButton";
+import SearchForm from "./SearchForm";
 
 export default function SearchBox() {
   const [_isMobile, setMobile] = useState(checkMobile());
@@ -48,7 +48,7 @@ export default function SearchBox() {
           </IconButton>
         )}
 
-        <SearchForm blurEvnet={() => _isMobile && setSearchToggle(false)} />
+        <SearchForm blurEvent={() => _isMobile && setSearchToggle(false)} />
       </div>
     </>
   );
