@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchForm 초기 렌더링 keyword가 없을 때 1`] = `
+<DocumentFragment>
+  <form
+    class="flex flex-nowrap items-center w-full h-[40px] *:h-full *: *:font-medium *:dark:text-slate-100 *:transition-colors *:duration-300"
+  >
+    <input
+      autocomplete="off"
+      class="grow w-[50px] px-[16px] rounded-l-md text-[16px] text-purple-600 bg-slate-100 caret-purple-600 placeholder:text-slate-400 dark:bg-slate-600"
+      placeholder="검색"
+      type="text"
+      value=""
+    />
+    <button
+      aria-label="검색"
+      class="shrink-0 px-8 rounded-r-md text-[24px] bg-slate-200 hover:bg-slate-300 dark:bg-slate-500 dark:hover:bg-slate-400"
+      title="검색 버튼을 눌러주세요"
+      type="submit"
+    >
+      <svg
+        aria-label="검색"
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        stroke-width="0"
+        viewBox="0 0 512 512"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M456.69 421.39L362.6 327.3a173.81 173.81 0 0034.84-104.58C397.44 126.38 319.06 48 222.72 48S48 126.38 48 222.72s78.38 174.72 174.72 174.72A173.81 173.81 0 00327.3 362.6l94.09 94.09a25 25 0 0035.3-35.3zM97.92 222.72a124.8 124.8 0 11124.8 124.8 124.95 124.95 0 01-124.8-124.8z"
+        />
+      </svg>
+    </button>
+  </form>
+</DocumentFragment>
+`;
