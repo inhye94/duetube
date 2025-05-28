@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import { IoSearch } from "react-icons/io5";
 import IconButton from "../modules/IconButton";
+import { checkMobile } from "../util/responsive";
 import SearchForm from "./SearchForm";
 
 export default function SearchBox() {
@@ -53,7 +54,3 @@ export default function SearchBox() {
     </>
   );
 }
-
-const checkMobile = () => {
-  return window.innerWidth < 768 ? true : false;
-};
