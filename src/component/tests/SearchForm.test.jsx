@@ -43,6 +43,18 @@ describe("SearchForm", () => {
     });
   });
 
+  it("input의 포커스가 벗어났을 때, blurEvent가 호출", () => {
+    const { getByPlaceholderText } = render(
+      withRouter(
+        <Route path="/" element={<SearchBar blurEvent={blurEvent} />} />
+      )
+    );
+
+    const input = getByPlaceholderText("검색");
+    fireEvent.blur(input);
+    expect(blurEvent).toHaveBeenCalledTimes(1);
+  });
+
   describe("Submit이 되지 않는 경우", () => {
     beforeEach(() => {
       mockedNavigate.mockClear();
