@@ -1,7 +1,13 @@
 import classNames from "classnames";
 import React from "react";
 
-export default function IconButton({ text, children, extraStyle, callback }) {
+export default function IconButton({
+  text,
+  children,
+  extraStyle = "",
+  callback,
+  ...props
+}) {
   return (
     <button
       type="button"
@@ -13,6 +19,7 @@ export default function IconButton({ text, children, extraStyle, callback }) {
         extraStyle
       )}
       onClick={callback}
+      {...props}
     >
       {children}
     </button>

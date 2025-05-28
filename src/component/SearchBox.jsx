@@ -29,7 +29,11 @@ export default function SearchBox() {
   return (
     <>
       {_isMobile && (
-        <IconButton text="검색" callback={() => setSearchToggle(true)}>
+        <IconButton
+          text="검색"
+          aria-label="검색창 열기"
+          callback={() => setSearchToggle(true)}
+        >
           <IoSearch aria-label="검색" />
         </IconButton>
       )}
@@ -42,10 +46,11 @@ export default function SearchBox() {
         {_isMobile && (
           <IconButton
             text="검색창 닫기"
+            aria-label="검색창 닫기"
             extraStyle={"mr-[4px]"}
             callback={() => setSearchToggle(false)}
           >
-            <IoMdClose aria-label="검색창 닫기" />
+            <IoMdClose aria-label="닫기" />
           </IconButton>
         )}
 

@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBox 초기 렌더 - PC 1`] = `
+<DocumentFragment>
+  <div
+    class="flex items-center fixed left-0 z-10 w-full px-[8px] translate-y-[0]  transition-transform duration-300 bg-white md:static md:min-w-[480px] md:px-0 md:bg-transparent dark:bg-slate-800"
+  >
+    <form
+      data-testid="search-form"
+    >
+      <input
+        data-testid="search-input"
+        type="text"
+      />
+    </form>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SearchBox 초기 렌더 - 모바일 1`] = `
+<DocumentFragment>
+  <button
+    aria-label="검색창 열기"
+    class="shrink-0 flex justify-center items-center w-8 h-8 text-[20px] rounded-full transition-colors hover:bg-slate-200 dark:hover:bg-slate-600"
+    title="검색"
+    type="button"
+  >
+    <svg
+      aria-label="검색"
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      stroke-width="0"
+      viewBox="0 0 512 512"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M456.69 421.39L362.6 327.3a173.81 173.81 0 0034.84-104.58C397.44 126.38 319.06 48 222.72 48S48 126.38 48 222.72s78.38 174.72 174.72 174.72A173.81 173.81 0 00327.3 362.6l94.09 94.09a25 25 0 0035.3-35.3zM97.92 222.72a124.8 124.8 0 11124.8 124.8 124.95 124.95 0 01-124.8-124.8z"
+      />
+    </svg>
+  </button>
+  <div
+    class="flex items-center fixed left-0 z-10 w-full px-[8px] translate-y-[-64px]  transition-transform duration-300 bg-white md:static md:min-w-[480px] md:px-0 md:bg-transparent dark:bg-slate-800"
+  >
+    <button
+      aria-label="검색창 닫기"
+      class="shrink-0 flex justify-center items-center w-8 h-8 text-[20px] rounded-full transition-colors hover:bg-slate-200 dark:hover:bg-slate-600 mr-[4px]"
+      title="검색창 닫기"
+      type="button"
+    >
+      <svg
+        aria-label="닫기"
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        stroke-width="0"
+        viewBox="0 0 512 512"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M405 136.798L375.202 107 256 226.202 136.798 107 107 136.798 226.202 256 107 375.202 136.798 405 256 285.798 375.202 405 405 375.202 285.798 256z"
+        />
+      </svg>
+    </button>
+    <form
+      data-testid="search-form"
+    >
+      <input
+        data-testid="search-input"
+        type="text"
+      />
+    </form>
+  </div>
+</DocumentFragment>
+`;
