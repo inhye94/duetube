@@ -1,10 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 import React from "react";
 import { useParams } from "react-router-dom";
-import VideoViewer from "../component/VideoDetail/VideoViewer";
-import VideoSummary from "../component/VideoDetail/VideoSummary";
 import Channel from "../component/Channel";
 import VideoDescription from "../component/VideoDetail/VideoDescription";
+import VideoSummary from "../component/VideoDetail/VideoSummary";
+import VideoViewer from "../component/VideoDetail/VideoViewer";
 import { useYoutubeApi } from "../context/YoutubeApiContext";
 
 export default function VideoDetail() {
@@ -12,18 +12,28 @@ export default function VideoDetail() {
   const { youtube } = useYoutubeApi();
 
   const { isLoading, error, data } = useQuery({
-    queryKey: ["detail"],
+    queryKey: ["detail", videoId],
     queryFn: async () => await youtube.detailAndChannel(videoId),
   });
 
-  if (isLoading) return <p className="loading">Loading!!!</p>;
-  if (error) return <p className="loading">에러 났서요!</p>;
+  if (isLoading)
+    return (
+      <p className="loading" data-testid="detail-loading">
+        Loading!!!
+      </p>
+    );
+  if (error)
+    return (
+      <p className="loading" data-testid="detail-error">
+        에러 났서요!
+      </p>
+    );
 
   return (
     <div className="md:flex">
       <div className="w-full md:w-3/4 md:mr-[24px]">
         {data.detail && (
-          <section>
+          <section data-testid="detail-container">
             <header>
               <div className="relative w-full aspect-video object-contain mb-[16px]">
                 <VideoViewer videoId={videoId} />

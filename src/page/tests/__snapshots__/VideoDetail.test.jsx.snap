@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VideoDetail 컴포넌트 정상적으로 렌더링합니다 1`] = `
+<DocumentFragment>
+  <div
+    class="md:flex"
+  >
+    <div
+      class="w-full md:w-3/4 md:mr-[24px]"
+    >
+      <section
+        data-testid="detail-container"
+      >
+        <header>
+          <div
+            class="relative w-full aspect-video object-contain mb-[16px]"
+          >
+            <p
+              data-testid="video-viewer"
+            />
+          </div>
+          <div
+            class="my-[24px]"
+          >
+            <div
+              data-testid="video-summary"
+            />
+          </div>
+        </header>
+        <div
+          class="p-[16px] mb-[24px] rounded-xl bg-slate-100 dark:bg-slate-600"
+        >
+          <p
+            data-testid="video-description"
+          />
+        </div>
+      </section>
+    </div>
+    <div
+      class="w-full md:w-1/4"
+    >
+      <p
+        data-testid="channel-detail"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
