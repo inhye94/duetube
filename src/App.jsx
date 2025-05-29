@@ -1,8 +1,9 @@
-import { Outlet } from "react-router-dom";
-import { useDarkModeContext } from "./context/DarkModeContext";
 import classNames from "classnames";
+import React from "react";
+import { Outlet } from "react-router-dom";
 import Gnb from "./component/Gnb";
-import { YoutubeApiContextProvider } from "./context/YoutubeApiContext";
+import { useDarkModeContext } from "./context/DarkModeContext";
+import { YoutubeApiContextProvider } from "./context/YoutubeProvider";
 
 function App() {
   const { darkMode } = useDarkModeContext();
