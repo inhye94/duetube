@@ -6,22 +6,63 @@ import { mockVideos } from "../../tests/videos";
 import Videos from "../Videos";
 
 describe("Videos", () => {
+  // API instance를 모킹
   const fakeYoutube = {
     search: jest.fn(),
   };
 
   afterEach(() => fakeYoutube.search.mockClear());
 
-  it("초기 렌더링", async () => {
-    fakeYoutube.search.mockImplementation(() => mockVideos);
+  it("로딩 출력", async () => {
+    fakeYoutube.search.mockImplementation(() => {
+      return new Promise(() => {});
+    });
+    renderVideos();
 
-    render(
+    await waitFor(() =>
+      expect(screen.queryByTestId("videos-loading")).toBeInTheDocument()
+    );
+  });
+
+  it("에러 출력", async () => {
+    fakeYoutube.search.mockRejectedValue(new Error("에러났서요!!!"));
+    renderVideos();
+
+    await waitFor(() =>
+      expect(screen.queryByTestId("videos-error")).toBeInTheDocument()
+    );
+  });
+
+  it("검색 결과 리스트 출력", async () => {
+    fakeYoutube.search.mockResolvedValue(mockVideos);
+    renderVideos();
+
+    await waitFor(() => screen.getAllByRole("listitem"));
+
+    expect(screen.queryByTestId("videos-loading")).toBeNull();
+    expect(screen.queryByTestId("videos-error")).toBeNull();
+  });
+
+  it('검색어가 있을 때, "키워드 검색결과" 문구 출력', () => {
+    const keyword = "실리카겔";
+    fakeYoutube.search.mockResolvedValue(mockVideos);
+    renderVideos(`/search/${keyword}`);
+
+    expect(screen.getByText(`${keyword} 검색결과`)).toBeInTheDocument();
+  });
+
+  function renderVideos(url = "/") {
+    return render(
       withAllContexts(
-        withRouter(<Route path="/" element={<Videos />} />),
+        withRouter(
+          <>
+            <Route path="/" element={<Videos />} />
+            <Route path="/search/:keyword" element={<Videos />} />
+          </>,
+          url
+        ),
         fakeYoutube
       )
     );
-
-    await waitFor(() => screen.getByText("요즘 인기있는 비디오🔥"));
-  });
+  }
 });

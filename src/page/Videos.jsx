@@ -28,8 +28,16 @@ export default function Videos() {
       </header>
 
       <ul className="flex flex-wrap items-stretch w-full">
-        {isLoading && <p className="loading">Loading!!!</p>}
-        {error && <p className="loading">에러났서요!!!</p>}
+        {isLoading && (
+          <p className="loading" data-testid="videos-loading">
+            Loading!!!
+          </p>
+        )}
+        {error && (
+          <p className="loading" data-testid="videos-error">
+            에러났서요!!!
+          </p>
+        )}
         {videos &&
           videos.map((video) => (
             <li key={video.id} className="basis-full sm:basis-1/2 md:basis-1/3">
