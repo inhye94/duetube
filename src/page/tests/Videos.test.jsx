@@ -19,18 +19,14 @@ describe("Videos", () => {
     });
     renderVideos();
 
-    await waitFor(() =>
-      expect(screen.queryByTestId("videos-loading")).toBeInTheDocument()
-    );
+    await screen.findByTestId("videos-loading");
   });
 
   it("에러 출력", async () => {
     fakeYoutube.search.mockRejectedValue(new Error("에러났서요!!!"));
     renderVideos();
 
-    await waitFor(() =>
-      expect(screen.queryByTestId("videos-error")).toBeInTheDocument()
-    );
+    await screen.findByTestId("videos-error");
   });
 
   it("검색 결과 리스트 출력", async () => {
