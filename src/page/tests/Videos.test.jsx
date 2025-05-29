@@ -37,10 +37,9 @@ describe("Videos", () => {
     fakeYoutube.search.mockResolvedValue(mockVideos);
     renderVideos();
 
-    await waitFor(() => screen.getAllByRole("listitem"));
-
-    expect(screen.queryByTestId("videos-loading")).toBeNull();
-    expect(screen.queryByTestId("videos-error")).toBeNull();
+    await waitFor(() =>
+      expect(screen.getAllByRole("listitem")).toHaveLength(mockVideos.length)
+    );
   });
 
   it('검색어가 있을 때, "키워드 검색결과" 문구 출력', () => {
