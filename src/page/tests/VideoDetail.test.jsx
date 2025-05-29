@@ -97,9 +97,7 @@ describe("VideoDetail 컴포넌트", () => {
     fakeYoutube.detailAndChannel.mockRejectedValue(new Error("에러 났서요!"));
     renderVideoDetail(videoId);
 
-    await waitFor(() =>
-      expect(screen.queryByTestId("detail-error")).toBeInTheDocument()
-    );
+    await screen.findByTestId("detail-error");
     expect(screen.getByTestId("detail-error")).toHaveTextContent(
       "에러 났서요!"
     );
