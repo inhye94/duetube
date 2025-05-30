@@ -1,14 +1,14 @@
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Videos from "./page/Videos";
-import VideoDetail from "./page/VideoDetail";
-import NotFound from "./page/NotFound/NotFound";
+import App from "./App";
 import DarkModeProvider from "./context/DarkModeContext";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import "./index.css";
+import NotFound from "./page/NotFound";
+import VideoDetail from "./page/VideoDetail";
+import Videos from "./page/Videos";
+import reportWebVitals from "./reportWebVitals";
 
 const router = createBrowserRouter([
   {
