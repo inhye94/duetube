@@ -20,6 +20,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --watch",
     "test:coverage": "yarn test --coverage --watchAll",
+    "cy:open": "cypress open",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -41,6 +42,7 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/cypress": "^10.0.3",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^16.3.0",
